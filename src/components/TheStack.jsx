@@ -18,6 +18,7 @@ const layers = [
   {
     id: 'rumi',
     label: 'Rumi',
+    href: 'https://www.rumi.systems',
     tagline: 'Run and Scale Systems',
     color: 'rumi',
     description: 'Rumi is our execution layer. It runs distributed, stateful systems in real time with enterprise-grade reliability. It handles state, messaging, scaling, consistency, and high performance.',
@@ -75,10 +76,25 @@ export default function TheStack() {
                 <div className={`relative p-8 sm:p-10 rounded-2xl border ${c.border} ${c.bg}`}>
                   <div className="flex flex-col sm:flex-row sm:items-start gap-8">
                     <div className="flex-1">
-                      <div className={`inline-flex items-center gap-2 px-3 py-1 text-xs font-mono tracking-wide uppercase border rounded-full mb-4 ${c.tag}`}>
-                        <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
-                        {layer.label}
-                      </div>
+                      {layer.href ? (
+                        <a
+                          href={layer.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`group inline-flex items-center gap-2 px-3 py-1 text-xs font-mono tracking-wide uppercase border rounded-full mb-4 transition-all hover:brightness-125 ${c.tag}`}
+                        >
+                          <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+                          {layer.label}
+                          <svg width="9" height="9" viewBox="0 0 10 10" className="opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                            <path d="M3 2h5v5M8 2L2.5 7.5" stroke="currentColor" strokeWidth="1.25" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <div className={`inline-flex items-center gap-2 px-3 py-1 text-xs font-mono tracking-wide uppercase border rounded-full mb-4 ${c.tag}`}>
+                          <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+                          {layer.label}
+                        </div>
+                      )}
                       <h3 className={`text-2xl font-semibold mb-3 ${c.text}`}>
                         {layer.tagline}
                       </h3>
