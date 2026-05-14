@@ -1,0 +1,8 @@
+# robots.txt for n5corp.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://n5corp.com/sitemap.xml
+
+# LLM-friendly map: https://n5corp.com/llms.txt
