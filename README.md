@@ -38,7 +38,7 @@ npm install -D gh-pages
 
 ```js
 export default defineConfig({
-  base: '/nvx-corp-website/',
+  base: '/nvx-n5-website/',
   plugins: [react(), tailwindcss()],
 })
 ```
@@ -51,14 +51,14 @@ npm run deploy
 
 5. In GitHub repo settings, go to **Pages** and set source to the `gh-pages` branch.
 
-The site will be live at `https://n5tech.github.io/nvx-corp-website/`
+The site will be live at `https://n5tech.github.io/nvx-n5-website/`
 
 ## Deploy via Vercel (Recommended)
 
 The simplest option — zero config for Vite projects.
 
 1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-2. Click **Add New Project** and import `n5tech/nvx-corp-website`
+2. Click **Add New Project** and import `n5tech/nvx-n5-website`
 3. Vercel auto-detects Vite — click **Deploy**
 4. Optionally connect a custom domain (e.g. `n5technologies.com`) in project settings
 
@@ -68,7 +68,7 @@ Every push to `main` auto-deploys.
 
 1. Go to [netlify.com](https://netlify.com) and sign in with GitHub
 2. Click **Add new site > Import an existing project**
-3. Select `n5tech/nvx-corp-website`
+3. Select `n5tech/nvx-n5-website`
 4. Build settings are auto-detected:
    - Build command: `npm run build`
    - Publish directory: `dist`

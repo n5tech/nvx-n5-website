@@ -4,7 +4,7 @@
 
 This is the corporate website for **N5 Technologies** -- "The System Compiler for AI-Native Enterprises." It's a single-page marketing site (plus a /legal route) that explains N5's thesis, its three-layer stack (Intent, Sutra, Rumi), and why enterprises should be *described*, not programmed.
 
-The site lives at [n5tech/nvx-corp-website](https://github.com/n5tech/nvx-corp-website) and auto-deploys to **Vercel** from the `main` branch.
+The site lives at [n5tech/nvx-n5-website](https://github.com/n5tech/nvx-n5-website) and auto-deploys to **Vercel** from the `main` branch.
 
 ---
 
@@ -45,7 +45,7 @@ This is a marketing site, not an app. The tech choices reflect that:
 ### Project Structure
 
 ```
-nvx-corp-website/
+nvx-n5-website/
   index.html              # Entry point. Loads fonts, sets meta tags.
   vite.config.js          # Vite + React + Tailwind plugins. That's it.
   package.json            # React 19, react-router-dom, tailwindcss v4
@@ -220,7 +220,7 @@ The data is defined as a plain array of objects at the top of the file. No API c
 
 ## Deployment
 
-**Vercel** auto-deploys from the `main` branch on GitHub. The repository is `n5tech/nvx-corp-website`.
+**Vercel** auto-deploys from the `main` branch on GitHub. The repository is `n5tech/nvx-n5-website`.
 
 Vercel detects Vite projects automatically -- no build configuration needed. It runs `npm run build` (which runs `vite build`) and serves the `dist/` directory.
 
