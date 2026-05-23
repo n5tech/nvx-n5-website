@@ -53,6 +53,10 @@ nvx-n5-website/
     fonts/                # Self-hosted Geist Sans woff2 files (4 weights)
     n5-logo.png           # Nav logo
     n5-favicon.png        # Browser tab favicon
+    robots.txt            # Allows all crawlers, points to sitemap
+    sitemap.xml           # Lists the two routes: / and /legal
+    llms.txt              # LLM-friendly link index of the site
+    llms-full.txt         # LLM-friendly site map with page content inlined as markdown
   src/
     index.css             # @font-face declarations, Tailwind @theme tokens, base styles
     main.jsx              # React root
@@ -235,6 +239,8 @@ Vercel detects Vite projects automatically -- no build configuration needed. It 
 ```
 
 This rewrites all paths to `/` so `BrowserRouter` can resolve the route client-side.
+
+**Static files in `public/` are served before the SPA rewrite.** The site ships four root-served files for crawlers and LLMs -- `robots.txt`, `sitemap.xml`, `llms.txt`, and `llms-full.txt` (an LLM-friendly map; `llms.txt` is a link index, `llms-full.txt` inlines the page content as markdown). They live in `public/`, so Vite copies them verbatim into `dist/` at build time. You might worry the catch-all rewrite (`/(.*)` → `/`) would swallow `/robots.txt` and serve `index.html` instead -- it doesn't. Vercel matches a real file in `dist/` *first* and only falls through to the rewrite when no file matches. So no `vercel.json` change was needed. **Lesson:** to add any future root-served static file (a search-engine verification file, an `ads.txt`, a `.well-known/` entry), just drop it in `public/`. The SPA rewrite never sees it.
 
 ---
 
