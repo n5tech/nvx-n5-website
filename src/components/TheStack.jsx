@@ -10,6 +10,7 @@ const layers = [
   {
     id: 'sutra',
     label: 'Sutra',
+    href: 'https://sutra.n5corp.ai',
     tagline: 'Design and Structure Systems',
     color: 'sutra',
     description: 'Sutra is our system design and compilation layer. It takes enterprise intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation.',
