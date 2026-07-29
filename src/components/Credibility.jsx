@@ -27,8 +27,8 @@ export default function Credibility() {
               <p className="text-sm text-muted mb-1 font-mono">The relationship</p>
               <p className="text-[#9aa3b2] text-sm leading-relaxed">
                 Enterprise intent defines what needs to be built.{' '}
-                <span className="text-[#7b93cc]">Sutra</span> structures the system.{' '}
-                <span className="text-[#5aadb1]">Rumi</span> runs it.
+                <a href="https://sutra.n5corp.ai" target="_blank" rel="noopener noreferrer" className="text-[#7b93cc] hover:underline">Sutra</a> structures the system.{' '}
+                <a href="https://rumi.systems" target="_blank" rel="noopener noreferrer" className="text-[#5aadb1] hover:underline">Rumi</a> runs it.
               </p>
             </div>
           </div>

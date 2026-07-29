@@ -9,8 +9,8 @@ export default function Footer({ onContact }) {
           </h2>
           <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-gold/40 to-transparent mb-8" />
           <div className="space-y-1 text-[#9aa3b2]">
-            <p><span className="text-[#c09b2d]">Sutra</span> turns enterprise intent into system design.</p>
-            <p><span className="text-[#5aadb1]">Rumi</span> turns system design into running systems.</p>
+            <p><a href="https://sutra.n5corp.ai" target="_blank" rel="noopener noreferrer" className="text-[#c09b2d] hover:underline">Sutra</a> turns enterprise intent into system design.</p>
+            <p><a href="https://rumi.systems" target="_blank" rel="noopener noreferrer" className="text-[#5aadb1] hover:underline">Rumi</a> turns system design into running systems.</p>
             <p className="text-[#e6eaf2] font-medium mt-4">Together, N5 turns enterprise intent into running systems.</p>
           </div>
           <button onClick={onContact}

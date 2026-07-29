@@ -14,6 +14,8 @@ const layers = [
     color: 'sutra',
     description: 'Sutra is our system design and compilation layer. It takes enterprise intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation.',
     outputs: ['Agents & Services', 'State Boundaries', 'Data Models & Schemas', 'Messaging & Interaction Flows', 'System Architecture'],
+    href: 'https://sutra.n5corp.ai',
+    linkLabel: 'Explore Sutra',
   },
   {
     id: 'rumi',
@@ -22,6 +24,8 @@ const layers = [
     color: 'rumi',
     description: 'Rumi is our execution layer. It runs distributed, stateful systems in real time with enterprise-grade reliability. It handles state, messaging, scaling, consistency, and high performance.',
     outputs: ['Microservice Execution', 'Stateful Processing', 'Real-Time Messaging', 'Fault Tolerance & Reliability', 'Elastic Scale', 'High Performance'],
+    href: 'https://rumi.systems',
+    linkLabel: 'Explore Rumi',
   },
 ]
 
@@ -85,6 +89,16 @@ export default function TheStack() {
                       <p className="text-[#9aa3b2] leading-relaxed">
                         {layer.description}
                       </p>
+                      {layer.href && (
+                        <a
+                          href={layer.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-block mt-5 text-sm font-medium ${c.text} opacity-80 hover:opacity-100 transition-opacity`}
+                        >
+                          {layer.linkLabel} &rarr;
+                        </a>
+                      )}
                     </div>
                     <div className="sm:w-56 flex-shrink-0">
                       <div className="space-y-2">
