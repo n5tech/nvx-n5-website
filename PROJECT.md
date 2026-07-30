@@ -193,6 +193,22 @@ Finding the right favicon took multiple attempts with different logo variants. T
 
 Browser tab title: **"N5 - Intent to Systems"** -- short, descriptive, and reinforces the core message.
 
+### 9. Cross-Linking to Sutra and Rumi, at Three Points Only
+
+For a long time the site *described* Sutra and Rumi everywhere and *linked* to neither. Both products have their own sites -- Sutra at `sutra.n5corp.ai`, Rumi at `rumi.systems` -- and a reader convinced by the argument had no way to act on it.
+
+The fix was not "link every mention." The words "Sutra" and "Rumi" appear across six components; hyperlinking all of them would turn the page into a mesh of blue and shred the restraint the rest of the design works to maintain. Instead there are exactly three link points, each placed where a reader has *just finished being persuaded* and is plausibly ready to leave:
+
+1. **The Stack** -- an "Explore Sutra →" / "Explore Rumi →" link under each layer's description, rendered in that layer's own `colorMap` color so it reads as part of the card rather than a bolted-on CTA. The Intent layer has no link, because Intent is a concept, not a product with a URL.
+2. **Credibility** -- the "The relationship" box, where the one-line summary of who does what is the natural place to follow either thread.
+3. **Footer** -- the two closing lines, the last thing a reader sees.
+
+Rumi points at `rumi.systems`, the marketing site, *not* `assistant.rumi.systems`. The Assistant is a developer tool; this site's audience is executives and architects. The same word links to different destinations depending on whose site it appears on -- on `rumi.systems` itself, "Rumi" in the "Part of N5" block points at the Assistant, because a reader already on the Rumi marketing site doesn't need to be sent back to it.
+
+**Deliberately left unlinked:** the Hero, How It Works, and Why This Matters. The hero's Sutra/Rumi mentions are their first introduction and sit directly above two in-page CTAs ("Explore the Stack", "See How It Works") -- linking outward there would pull visitors off the page *before the argument lands*, which is the one thing a thesis-driven site cannot afford. The other two are descriptive process and benefit prose where a link would only repeat what The Stack already offers a few hundred pixels away.
+
+**Lesson:** an outbound link is a request for the reader to leave. Where you put it matters more than whether it exists. Placing links at the end of each persuasive unit, rather than at the first mention of a proper noun, is the difference between a site that converts and a site that leaks.
+
 ---
 
 ## The Stack Visualization (TheStack.jsx)
@@ -214,11 +230,14 @@ const colorMap = {
 Each layer card has:
 - A colored tag pill with a dot indicator
 - A tagline and description
+- An optional outbound link (Sutra and Rumi only -- see design decision 9)
 - A column of "output" pills showing what that layer produces
 
 Dashed SVG lines connect the cards vertically, reinforcing the "flow downward" metaphor (intent flows into design, design flows into execution).
 
 The data is defined as a plain array of objects at the top of the file. No API calls, no context, no state management. For static content like this, the simplest approach is the right one.
+
+The outbound link is driven by two optional fields on the layer object, `href` and `linkLabel`. Only the Sutra and Rumi entries carry them, and the JSX renders the anchor behind a `{layer.href && ...}` guard, so the Intent card is link-free without needing a special case in the markup. The link reuses `c.text` from `colorMap`, which means adding a fourth layer some day requires no styling work -- give it a color entry and, if it has a site, an `href`. Data-driven rendering earns its keep exactly here: the visual difference between the three cards lives entirely in the data, not in three branches of JSX.
 
 ---
 
