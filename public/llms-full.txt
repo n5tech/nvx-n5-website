@@ -102,7 +102,6 @@ N5 is the infrastructure for turning intent into running systems.
 
 Sutra turns intent into system design.
 Rumi turns system design into running systems.
-Together, N5 turns intent into running systems.
 
 ---
 

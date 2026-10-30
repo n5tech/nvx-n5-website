@@ -11,7 +11,6 @@ export default function Footer({ onContact }) {
           <div className="space-y-1 text-[#9aa3b2]">
             <p><a href="https://sutra.n5corp.ai" target="_blank" rel="noopener noreferrer" className="text-[#c09b2d] hover:underline">Sutra</a> turns intent into system design.</p>
             <p><a href="https://rumi.systems" target="_blank" rel="noopener noreferrer" className="text-[#5aadb1] hover:underline">Rumi</a> turns system design into running systems.</p>
-            <p className="text-[#e6eaf2] font-medium mt-4">Together, N5 turns intent into running systems.</p>
           </div>
           <button onClick={onContact}
             className="inline-flex mt-12 px-8 py-3.5 rounded-lg bg-accent text-[#e6eaf2] font-medium hover:bg-accent-light transition-all cursor-pointer">
