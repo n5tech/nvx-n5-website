@@ -12,7 +12,7 @@ URL: https://n5corp.com/
 
 AI That Turns Intent Into Systems.
 
-Anyone can describe what they need. N5 turns that intent into enterprise-grade systems. Through Sutra, our system design and compilation layer, and Rumi, our execution layer.
+N5 uses AI to transform intent into intelligent, running systems. Through Sutra, our system design and compilation layer, and Rumi, our execution layer.
 
 ### The Shift — Code Was the First Step. Systems Are What Matter.
 
