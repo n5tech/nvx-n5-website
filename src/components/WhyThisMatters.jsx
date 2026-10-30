@@ -27,6 +27,11 @@ export default function WhyThisMatters() {
             We do not generate code.<br />
             <span className="text-gold">We compile systems.</span>
           </h2>
+          <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto">
+            Building sophisticated software systems should not depend on engineering expertise or
+            organizational resources. N5 makes system creation accessible through intent, with the
+            architecture, performance, and reliability the most demanding applications require.
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">

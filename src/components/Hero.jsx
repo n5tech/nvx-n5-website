@@ -14,7 +14,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-[#9aa3b2] max-w-3xl mx-auto mb-1.5 leading-relaxed">
-          N5 uses AI to transform enterprise intent into intelligent, running systems.
+          Anyone can describe what they need. N5 turns that intent into enterprise-grade systems.
         </p>
         <p className="text-base sm:text-lg text-[#9aa3b2]/70 max-w-3xl mx-auto mb-12 leading-relaxed">
           Through <span className="text-[#e6eaf2]">Sutra</span>, our system design and compilation layer,{' '}

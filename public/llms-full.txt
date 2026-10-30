@@ -1,6 +1,6 @@
 # N5 Technologies
 
-> N5 Technologies is the system compiler for AI-native enterprises: a three-layer stack — Intent, Sutra (system design and compilation), Rumi (execution) — that turns enterprise intent into running systems. Enterprises are described, not programmed.
+> N5: AI that turns intent into running systems through Sutra and Rumi. A three-layer stack — Intent, Sutra (system design and compilation), Rumi (execution). Systems are described, not programmed.
 
 ---
 
@@ -12,19 +12,19 @@ URL: https://n5corp.com/
 
 AI That Turns Intent Into Systems.
 
-N5 uses AI to transform enterprise intent into intelligent, running systems. Through Sutra, our system design and compilation layer, and Rumi, our execution layer.
+Anyone can describe what they need. N5 turns that intent into enterprise-grade systems. Through Sutra, our system design and compilation layer, and Rumi, our execution layer.
 
 ### The Shift — Code Was the First Step. Systems Are What Matter.
 
-How enterprise systems are created is changing.
+How systems are created is changing.
 
 **Yesterday.** Requirements → Code → Systems. AI has learned to write code. But systems still have to be designed and put together manually.
 
-**N5.** Intent → Design → Compile → Execute. With N5, enterprises are described, not programmed. AI designs and runs the system.
+**N5.** Intent → Design → Compile → Execute. With N5, systems are described, not programmed. AI designs and runs the system.
 
-### The Insight — Enterprises Are Not Built Out of Code. They Are Built Out of Systems.
+### The Insight — Code Is Not the System. Architecture Makes It One.
 
-These include behavior, state, and interactions that code alone cannot define.
+A system needs behavior, state, and interactions that code alone cannot define.
 
 Real systems require:
 - Distributed Behavior
@@ -40,11 +40,11 @@ Better code. The same system design bottleneck. The real problem is not code gen
 
 ### The N5 Stack — Three Layers. One Architecture.
 
-From enterprise intent to running systems. Each layer adds structure and brings the system closer to execution.
+From intent to running systems. Each layer adds structure and brings the system closer to execution.
 
-**Intent Layer — Describe the enterprise.** Enterprise intent emerges from business analysis, consulting workflows, or system discovery platforms. It captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input. Outputs: processes & workflows, constraints & rules, roles & responsibilities, opportunities for AI & systems.
+**Intent Layer — Describe what you need.** Intent comes from conversation, business analysis, consulting workflows, or system discovery platforms. It captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input. Outputs: processes & workflows, constraints & rules, roles & responsibilities, opportunities for AI & systems.
 
-**Sutra — Design and structure systems.** Sutra is our system design and compilation layer. It takes enterprise intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation. Outputs: agents & services, state boundaries, data models & schemas, messaging & interaction flows, system architecture.
+**Sutra — Design and structure systems.** Sutra is our system design and compilation layer. It takes intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation. Outputs: agents & services, state boundaries, data models & schemas, messaging & interaction flows, system architecture.
 
 **Rumi — Run and scale systems.** Rumi is our execution layer. It runs distributed, stateful systems in real time with enterprise-grade reliability. It handles state, messaging, scaling, consistency, and high performance. Outputs: microservice execution, stateful processing, real-time messaging, fault tolerance & reliability, elastic scale, high performance.
 
@@ -52,7 +52,7 @@ From enterprise intent to running systems. Each layer adds structure and brings 
 
 Four steps. No hand-written plumbing. No architecture guesswork.
 
-**01 — Describe enterprise intent.** Capture processes, constraints, roles, and opportunities in natural language. No formal specification required.
+**01 — Describe your intent.** Capture processes, constraints, roles, and opportunities in natural language. No formal specification required.
 
 **02 — Refine in Sutra.** Through interactive dialogue, Sutra structures intent into agents, state boundaries, data models, and messaging flows.
 
@@ -62,28 +62,32 @@ Four steps. No hand-written plumbing. No architecture guesswork.
 
 ### Why This Matters — We do not generate code. We compile systems.
 
+Building sophisticated software systems should not depend on engineering expertise or organizational resources. N5 makes system creation accessible through intent, with the architecture, performance, and reliability the most demanding applications require.
+
 - **Faster path to production.** Skip months of system design and plumbing. Move from intent to running systems.
 - **Coherent architecture.** Systems are compiled from structured design, not stitched together from code fragments.
 - **Scalable execution.** Rumi handles partitioning, state, and messaging at enterprise scale from day one.
 - **Continuous evolution.** Systems evolve through intent refinement, not rewrites. Change the description and recompile the system.
 
-### For Enterprises — Built for what comes next.
+### For Businesses — Built for what comes next.
 
-N5 is not a coding copilot, an AI wrapper, or a low-code platform. It is the infrastructure for how AI-native enterprises are built.
+From a new idea to a complex business operation: describe what you need, and N5 creates the system that runs it.
+
+N5 is not a coding copilot, an AI wrapper, or a low-code platform. It is the infrastructure for how AI-native businesses are built.
 
 Use cases:
-- **AI-native operating models.** Design and deploy enterprise systems where AI agents are first-class participants, not bolted-on features.
+- **AI-native operating models.** Design and deploy systems where AI agents are first-class participants, not bolted-on features.
 - **Intelligent workflows.** Orchestrate complex business processes with stateful, distributed execution. Not fragile scripts.
 - **Distributed agent systems.** Build multi-agent architectures with proper state boundaries, messaging, and deterministic behavior.
-- **Modern enterprise infrastructure.** Replace brittle integration layers with compiled systems that scale, evolve, and maintain consistency.
+- **Modern business infrastructure.** Replace brittle integration layers with compiled systems that scale, evolve, and maintain consistency.
 
 N5 is *not* a coding copilot, *not* an AI agent wrapper, *not* a workflow tool, *not* a low-code platform.
 
 ### Under the Hood — Not a dev tool. An execution substrate.
 
-Rumi is a purpose-built runtime for enterprise systems. Sutra and Rumi together encode system patterns, not just syntax, and produce coherent systems, not fragments of code.
+Rumi is a purpose-built runtime for business-critical systems. Sutra and Rumi together encode system patterns, not just syntax, and produce coherent systems, not fragments of code.
 
-The relationship: Enterprise intent defines what needs to be built. Sutra structures the system. Rumi runs it.
+The relationship: Intent defines what needs to be built. Sutra structures the system. Rumi runs it.
 
 Core principles:
 - Stateful Systems
@@ -96,11 +100,11 @@ Core principles:
 
 ### Closing
 
-N5 is the infrastructure for how AI-native enterprises are built.
+N5 is the infrastructure for turning intent into running systems.
 
-Sutra turns enterprise intent into system design.
+Sutra turns intent into system design.
 Rumi turns system design into running systems.
-Together, N5 turns enterprise intent into running systems.
+Together, N5 turns intent into running systems.
 
 ---
 

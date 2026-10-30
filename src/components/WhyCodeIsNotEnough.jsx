@@ -15,12 +15,12 @@ export default function WhyCodeIsNotEnough() {
       <div className="max-w-4xl mx-auto">
         <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">The Insight</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
-          Enterprises Are Not Built Out of Code<br />
-          <span className="text-[#9aa3b2]">They Are Built Out of <span className="text-gold">Systems</span></span>
+          Code Is Not the System<br />
+          <span className="text-[#9aa3b2]"><span className="text-gold">Architecture</span> Makes It One</span>
         </h2>
 
         <p className="text-lg text-[#9aa3b2] mb-16">
-          These include behavior, state, and interactions that code alone cannot define.
+          A system needs behavior, state, and interactions that code alone cannot define.
         </p>
 
         <p className="text-sm text-muted font-mono uppercase tracking-widest mb-6">Real systems require:</p>

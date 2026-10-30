@@ -1,7 +1,7 @@
 const useCases = [
   {
     title: 'AI-native operating models',
-    desc: 'Design and deploy enterprise systems where AI agents are first-class participants, not bolted-on features.',
+    desc: 'Design and deploy systems where AI agents are first-class participants, not bolted-on features.',
   },
   {
     title: 'Intelligent workflows',
@@ -12,7 +12,7 @@ const useCases = [
     desc: 'Build multi-agent architectures with proper state boundaries, messaging, and deterministic behavior.',
   },
   {
-    title: 'Modern enterprise infrastructure',
+    title: 'Modern business infrastructure',
     desc: 'Replace brittle integration layers with compiled systems that scale, evolve, and maintain consistency.',
   },
 ]
@@ -22,15 +22,19 @@ export default function ForEnterprises() {
     <section className="py-32 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-20">
-          <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">For Enterprises</p>
+          <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">For Businesses</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
             Built for what comes next
           </h2>
+          <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto mb-3">
+            From a new idea to a complex business operation: describe what you need, and N5 creates
+            the system that runs it.
+          </p>
           <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto">
             N5 is not a coding copilot, an AI wrapper, or a low-code platform.
           </p>
           <p className="text-lg text-gold font-medium max-w-2xl mx-auto mt-3">
-            It is the infrastructure for how AI-native enterprises are built.
+            It is the infrastructure for how AI-native businesses are built.
           </p>
         </div>
 

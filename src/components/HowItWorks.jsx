@@ -1,7 +1,7 @@
 const steps = [
   {
     num: '01',
-    title: 'Describe Enterprise Intent',
+    title: 'Describe Your Intent',
     desc: 'Capture processes, constraints, roles, and opportunities in natural language. No formal specification required.',
   },
   {

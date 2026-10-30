@@ -1,6 +1,8 @@
 # N5 Technologies
 
-> N5 Technologies is the system compiler for AI-native enterprises: a three-layer stack — Intent, Sutra (system design and compilation), Rumi (execution) — that turns enterprise intent into running systems. Enterprises are described, not programmed.
+> N5: AI that turns intent into running systems through Sutra and Rumi. A three-layer stack — Intent, Sutra (system design and compilation), Rumi (execution). Systems are described, not programmed.
+
+Building sophisticated software systems should not depend on engineering expertise or organizational resources. N5 makes system creation accessible through intent, with the architecture, performance, and reliability the most demanding applications require.
 
 ## Homepage
 
@@ -8,8 +10,8 @@
 
 ## The Stack
 
-- **Intent.** Enterprise intent emerges from business analysis, consulting workflows, or system discovery platforms. Captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input.
-- **Sutra.** System design and compilation layer. Takes enterprise intent and refines it into structured system design through interactive dialogue. Not code generation — system design through conversation.
+- **Intent.** Intent comes from conversation, business analysis, consulting workflows, or system discovery platforms. Captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input.
+- **Sutra.** System design and compilation layer. Takes intent and refines it into structured system design through interactive dialogue. Not code generation — system design through conversation.
 - **Rumi.** Execution layer. Runs distributed, stateful systems in real time with enterprise-grade reliability. Handles state, messaging, scaling, consistency, and high performance.
 
 ## Legal
