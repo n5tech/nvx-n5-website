@@ -71,8 +71,6 @@ Building sophisticated software systems should not depend on engineering experti
 
 ### For Businesses — Built for what comes next.
 
-From a new idea to a complex business operation: describe what you need, and N5 creates the system that runs it.
-
 N5 is not a coding copilot, an AI wrapper, or a low-code platform. It is the infrastructure for how AI-native businesses are built.
 
 Use cases:

@@ -216,7 +216,7 @@ The site originally said "enterprise" about 50 times across the page and the LLM
 | Level | What the copy is saying | Wording now |
 |-------|-------------------------|-------------|
 | **Mission** | Intent becomes systems, for anyone | No customer noun at all -- "intent", "your intent", "systems are described, not programmed" |
-| **Go-to-market** | Who we sell to today | "Businesses", only in the For Businesses section, with a lead that sells range ("from a new idea to a complex business operation") rather than company size |
+| **Go-to-market** | Who we sell to today | "Businesses", only in the For Businesses section |
 | **Quality bar** | What everyone gets | "Enterprise-grade" stays. It is a promise, not an audience -- and the strongest thing you can tell a small company |
 
 Two companion changes came with it. The Insight headline became "Code Is Not the System / Architecture Makes It One", because "Businesses are built out of systems" was not even true (businesses *use* systems). And Why This Matters gained the democratization thesis: sophisticated systems should not depend on engineering expertise or organizational resources. The technical vocabulary (partitioning, exactly-once processing) deliberately stayed -- the N5 site makes the architectural case; Sutra's site is where the language goes non-technical.

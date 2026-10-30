@@ -26,10 +26,6 @@ export default function ForEnterprises() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
             Built for what comes next
           </h2>
-          <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto mb-3">
-            From a new idea to a complex business operation: describe what you need, and N5 creates
-            the system that runs it.
-          </p>
           <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto">
             N5 is not a coding copilot, an AI wrapper, or a low-code platform.
           </p>
