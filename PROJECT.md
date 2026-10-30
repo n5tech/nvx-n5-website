@@ -2,7 +2,7 @@
 
 ## What This Is
 
-This is the corporate website for **N5 Technologies** -- "The System Compiler for AI-Native Enterprises." It's a single-page marketing site (plus a /legal route) that explains N5's thesis, its three-layer stack (Intent, Sutra, Rumi), and why enterprises should be *described*, not programmed.
+This is the corporate website for **N5 Technologies** -- "AI that turns intent into running systems through Sutra and Rumi." It's a single-page marketing site (plus a /legal route) that explains N5's thesis, its three-layer stack (Intent, Sutra, Rumi), and why systems should be *described*, not programmed.
 
 The site lives at [n5tech/nvx-n5-website](https://github.com/n5tech/nvx-n5-website) and auto-deploys to **Vercel** from the `main` branch.
 
@@ -10,13 +10,13 @@ The site lives at [n5tech/nvx-n5-website](https://github.com/n5tech/nvx-n5-websi
 
 ## The N5 Thesis (What the Site Communicates)
 
-N5's core argument is deceptively simple: AI can already write code, but code isn't the hard part. **Systems** are the hard part -- the stateful, distributed, interconnected architectures that enterprises actually run on. Code generation gives you fragments; N5 compiles whole systems.
+N5's core argument is deceptively simple: AI can already write code, but code isn't the hard part. **Systems** are the hard part -- the stateful, distributed, interconnected architectures that real businesses run on. Code generation gives you fragments; N5 compiles whole systems. And because the input is *intent* rather than code, building a sophisticated system stops depending on engineering expertise or organizational resources -- anyone who can describe what they need gets an enterprise-grade system.
 
 The three-layer stack:
 
 | Layer | Role | Color |
 |-------|------|-------|
-| **Intent** | Captures enterprise intent from business analysis -- processes, constraints, roles, opportunities | Gold `#c09b2d` |
+| **Intent** | Captures intent from conversation or business analysis -- processes, constraints, roles, opportunities | Gold `#c09b2d` |
 | **Sutra** | System design and compilation layer. Turns intent into structured system design through dialogue. | Navy `#233263` |
 | **Rumi** | Execution layer. Runs distributed, stateful systems with enterprise-grade reliability. | Teal `#2f6f73` |
 
@@ -208,6 +208,20 @@ Rumi points at `rumi.systems`, the marketing site, *not* `assistant.rumi.systems
 **Deliberately left unlinked:** the Hero, How It Works, and Why This Matters. The hero's Sutra/Rumi mentions are their first introduction and sit directly above two in-page CTAs ("Explore the Stack", "See How It Works") -- linking outward there would pull visitors off the page *before the argument lands*, which is the one thing a thesis-driven site cannot afford. The other two are descriptive process and benefit prose where a link would only repeat what The Stack already offers a few hundred pixels away.
 
 **Lesson:** an outbound link is a request for the reader to leave. Where you put it matters more than whether it exists. Placing links at the end of each persuasive unit, rather than at the first mention of a proper noun, is the difference between a site that converts and a site that leaks.
+
+### 10. "Enterprise" Has Three Jobs, So It Got Three Answers
+
+The site originally said "enterprise" about 50 times across the page and the LLM files. Then the go-to-market shifted: Sutra sells to SMBs first, enterprises next, individuals after that. The tempting fix was a find-and-replace to "business". It would have been wrong, because the word was doing three different jobs:
+
+| Level | What the copy is saying | Wording now |
+|-------|-------------------------|-------------|
+| **Mission** | Intent becomes systems, for anyone | No customer noun at all -- "intent", "your intent", "systems are described, not programmed" |
+| **Go-to-market** | Who we sell to today | "Businesses", only in the For Businesses section |
+| **Quality bar** | What everyone gets | "Enterprise-grade" stays. It is a promise, not an audience -- and the strongest thing you can tell a small company |
+
+Two companion changes came with it. The Insight headline became "Code Is Not the System / Architecture Makes It One", because "Businesses are built out of systems" was not even true (businesses *use* systems). And Why This Matters gained the democratization thesis: sophisticated systems should not depend on engineering expertise or organizational resources. The technical vocabulary (partitioning, exactly-once processing) deliberately stayed -- the N5 site makes the architectural case; Sutra's site is where the language goes non-technical.
+
+**Lesson:** N5's mission must not move every time Sutra's target customer does. Write the mission with no customer in it, and confine the current go-to-market to the one section whose job is to sell. The next shift in go-to-market then costs one section, not a site rewrite. And when you swap a word everywhere, first ask what job it does in each place -- a find-and-replace treats a promise and an audience as the same thing.
 
 ---
 

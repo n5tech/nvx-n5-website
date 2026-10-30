@@ -2,9 +2,9 @@ const layers = [
   {
     id: 'intent',
     label: 'Intent Layer',
-    tagline: 'Describe the enterprise',
+    tagline: 'Describe what you need',
     color: 'intent',
-    description: 'Enterprise intent emerges from business analysis, consulting workflows, or system discovery platforms. It captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input.',
+    description: 'Intent comes from conversation, business analysis, consulting workflows, or system discovery platforms. It captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input.',
     outputs: ['Processes & Workflows', 'Constraints & Rules', 'Roles & Responsibilities', 'Opportunities for AI & Systems'],
   },
   {
@@ -12,7 +12,7 @@ const layers = [
     label: 'Sutra',
     tagline: 'Design and Structure Systems',
     color: 'sutra',
-    description: 'Sutra is our system design and compilation layer. It takes enterprise intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation.',
+    description: 'Sutra is our system design and compilation layer. It takes intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation.',
     outputs: ['Agents & Services', 'State Boundaries', 'Data Models & Schemas', 'Messaging & Interaction Flows', 'System Architecture'],
     href: 'https://sutra.n5corp.ai',
     linkLabel: 'Explore Sutra',
@@ -66,7 +66,7 @@ export default function TheStack() {
             Three Layers. One Architecture.
           </h2>
           <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto">
-            From enterprise intent to running systems.<br />
+            From intent to running systems.<br />
             Each layer adds structure and brings the system closer to execution.
           </p>
         </div>

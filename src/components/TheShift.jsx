@@ -9,7 +9,7 @@ export default function TheShift() {
         </h2>
 
         <p className="text-lg text-[#9aa3b2] mb-16">
-          How enterprise systems are created is changing.
+          How systems are created is changing.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4">
@@ -46,7 +46,7 @@ export default function TheShift() {
               <Step label="Execute" active />
             </div>
             <p className="mt-6 text-[13px] text-[#b3bac6] leading-loose">
-              With N5, enterprises are described, not programmed.<br />
+              With N5, systems are described, not programmed.<br />
               AI designs and runs the system.
             </p>
           </div>

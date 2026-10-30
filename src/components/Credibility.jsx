@@ -20,13 +20,13 @@ export default function Credibility() {
               An execution substrate.
             </h2>
             <p className="text-[#9aa3b2] leading-relaxed mb-8">
-              Rumi is a purpose-built runtime for enterprise systems. Sutra and Rumi together
+              Rumi is a purpose-built runtime for business-critical systems. Sutra and Rumi together
               encode system patterns, not just syntax, and produce coherent systems, not fragments of code.
             </p>
             <div className="p-6 rounded-xl border border-border bg-surface/50">
               <p className="text-sm text-muted mb-1 font-mono">The relationship</p>
               <p className="text-[#9aa3b2] text-sm leading-relaxed">
-                Enterprise intent defines what needs to be built.{' '}
+                Intent defines what needs to be built.{' '}
                 <a href="https://sutra.n5corp.ai" target="_blank" rel="noopener noreferrer" className="text-[#7b93cc] hover:underline">Sutra</a> structures the system.{' '}
                 <a href="https://rumi.systems" target="_blank" rel="noopener noreferrer" className="text-[#5aadb1] hover:underline">Rumi</a> runs it.
               </p>
