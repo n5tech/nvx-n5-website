@@ -227,6 +227,8 @@ Two companion changes came with it. The Insight headline became "Code Is Not the
 
 **Lesson:** N5's mission must not move every time Sutra's target customer does. Write the mission with no customer in it, and confine the current go-to-market to the one section whose job is to sell. The next shift in go-to-market then costs one section, not a site rewrite. And when you swap a word everywhere, first ask what job it does in each place -- a find-and-replace treats a promise and an audience as the same thing.
 
+**Copy is approved in the rendered page, not in a document.** The review doc approved three lines that only failed once rendered. The stronger Hero subhead ("Anyone can describe what they need…") wrapped onto a second line, so it was replaced with the shorter "N5 uses AI to transform intent into intelligent, running systems." The new Footer headline ran to three lines in a `max-w-3xl` box, so the closing section went to `max-w-4xl`. And that headline now said the same thing as the "Together, N5 turns intent into running systems" line two lines below it, so that line was removed. None of this shows up in a table of before-and-after strings. Render the page, then read it top to bottom as a visitor would.
+
 ---
 
 ## The Stack Visualization (TheStack.jsx)
