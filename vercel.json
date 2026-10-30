@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/legal", "destination": "/legal/index.html" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }

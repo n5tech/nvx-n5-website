@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import TheShift from './components/TheShift'
@@ -35,14 +35,16 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false)
   const openContact = () => setContactOpen(true)
 
+  // The router is supplied by the caller: BrowserRouter in main.jsx, StaticRouter
+  // in entry-server.jsx when prerendering.
   return (
-    <BrowserRouter>
+    <>
       <Nav onContact={openContact} />
       <Routes>
         <Route path="/" element={<HomePage openContact={openContact} />} />
         <Route path="/legal" element={<Legal />} />
       </Routes>
       <ContactForm open={contactOpen} onClose={() => setContactOpen(false)} />
-    </BrowserRouter>
+    </>
   )
 }
