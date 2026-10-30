@@ -46,7 +46,7 @@ This is a marketing site, not an app. The tech choices reflect that:
 
 ```
 nvx-n5-website/
-  index.html              # Entry point. Loads fonts, sets meta tags.
+  index.html              # Entry point. Fonts, meta description, Open Graph/Twitter tags, JSON-LD.
   vite.config.js          # Vite + React + Tailwind plugins. That's it.
   package.json            # React 19, react-router-dom, tailwindcss v4
   public/
@@ -54,7 +54,8 @@ nvx-n5-website/
     n5-logo.png           # Nav logo
     n5-favicon.png        # Browser tab favicon
     robots.txt            # Allows all crawlers, points to sitemap
-    sitemap.xml           # Lists the two routes: / and /legal
+    sitemap.xml           # Lists the two routes: / and /legal (bump <lastmod> when copy changes)
+    og-image.png          # 1200x630 link-preview image (Open Graph + Twitter)
     llms.txt              # LLM-friendly link index of the site
     llms-full.txt         # LLM-friendly site map with page content inlined as markdown
   src/
@@ -274,6 +275,8 @@ Vercel detects Vite projects automatically -- no build configuration needed. It 
 This rewrites all paths to `/` so `BrowserRouter` can resolve the route client-side.
 
 **Static files in `public/` are served before the SPA rewrite.** The site ships four root-served files for crawlers and LLMs -- `robots.txt`, `sitemap.xml`, `llms.txt`, and `llms-full.txt` (an LLM-friendly map; `llms.txt` is a link index, `llms-full.txt` inlines the page content as markdown). They live in `public/`, so Vite copies them verbatim into `dist/` at build time. You might worry the catch-all rewrite (`/(.*)` → `/`) would swallow `/robots.txt` and serve `index.html` instead -- it doesn't. Vercel matches a real file in `dist/` *first* and only falls through to the rewrite when no file matches. So no `vercel.json` change was needed. **Lesson:** to add any future root-served static file (a search-engine verification file, an `ads.txt`, a `.well-known/` entry), just drop it in `public/`. The SPA rewrite never sees it.
+
+**Answer engines read the `<head>`, so it carries the identity.** `index.html` has Open Graph and Twitter tags (so a link pasted into Slack, LinkedIn or X shows a title, description and `og-image.png`) and a JSON-LD `@graph`: the `Organization` (with `legalName` "N5 Technologies, Inc."), the `WebSite`, and Sutra and Rumi as `SoftwareApplication`s whose `creator` points back at the organization by `@id`. That last link is what lets an answer engine say "Sutra, by N5" instead of treating three domains as three unrelated companies. Sutra and Rumi deliberately are *not* in `sameAs` -- that property means "the same entity elsewhere" (a LinkedIn page, say), and a product is not the company. **When the positioning changes, update five places together:** the page copy, the meta/OG/Twitter descriptions, the JSON-LD descriptions, `llms.txt` + `llms-full.txt`, and the homepage `<lastmod>` in `sitemap.xml`. The `og-image.png` was rendered from HTML in the site's own fonts and colours with headless Chrome; if the headline ever changes, re-render it rather than editing the PNG.
 
 ---
 
