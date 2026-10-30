@@ -23,7 +23,7 @@ export default function Footer({ onContact }) {
       <div className="border-t border-border px-6 py-6">
         <div className="max-w-6xl mx-auto flex items-center justify-between text-sm text-muted">
           <a href="/legal" className="hover:text-[#e6eaf2] transition-colors">Legal &amp; Privacy</a>
-          <span className="text-xs">&copy; {new Date().getFullYear()} N5 Technologies, Inc. All rights reserved.</span>
+          <span className="text-xs" suppressHydrationWarning>&copy; {new Date().getFullYear()} N5 Technologies, Inc. All rights reserved.</span>
         </div>
       </div>
     </footer>

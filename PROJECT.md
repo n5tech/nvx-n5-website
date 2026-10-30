@@ -48,7 +48,9 @@ This is a marketing site, not an app. The tech choices reflect that:
 nvx-n5-website/
   index.html              # Entry point. Fonts, meta description, Open Graph/Twitter tags, JSON-LD.
   vite.config.js          # Vite + React + Tailwind plugins. That's it.
-  package.json            # React 19, react-router-dom, tailwindcss v4
+  package.json            # React 19, react-router-dom, tailwindcss v4; `build` also prerenders
+  scripts/
+    prerender.js          # Writes static HTML per route into dist/ (see Deployment)
   public/
     fonts/                # Self-hosted Geist Sans woff2 files (4 weights)
     n5-logo.png           # Nav logo
@@ -60,8 +62,9 @@ nvx-n5-website/
     llms-full.txt         # LLM-friendly site map with page content inlined as markdown
   src/
     index.css             # @font-face declarations, Tailwind @theme tokens, base styles
-    main.jsx              # React root
-    App.jsx               # BrowserRouter, routes, contact modal state
+    main.jsx              # Browser entry: BrowserRouter; hydrates prerendered HTML
+    entry-server.jsx      # Build-time entry: StaticRouter + renderToString, used by prerender.js
+    App.jsx               # Routes, contact modal state (router supplied by the entry)
     components/
       Nav.jsx             # Fixed top bar, scroll-aware background
       Hero.jsx            # "AI That Turns Intent Into Systems"
@@ -86,7 +89,7 @@ The architecture is intentionally flat. `App.jsx` is the orchestrator:
 3. The homepage is a simple vertical stack of section components. No shared state between sections. Each component is self-contained with its own data (arrays of objects for cards, steps, principles, etc.).
 4. `Nav` uses a scroll listener to add a backdrop blur and bottom border after the user scrolls 40px -- a subtle touch that makes the nav "materialize" as you scroll down from the hero.
 
-The routing is minimal: `/` renders the homepage sections, `/legal` renders the Legal component. That's it.
+The routing is minimal: `/` renders the homepage sections, `/legal` renders the Legal component. `App.jsx` deliberately contains no router: `main.jsx` wraps it in `BrowserRouter` in the browser, and `entry-server.jsx` wraps it in `StaticRouter` at build time. That one split is what makes prerendering possible. **Adding a route now takes three edits:** the `<Route>` in `App.jsx`, an entry in the `routes` list in `scripts/prerender.js`, and a line in `sitemap.xml`. Skip the second and the new page is served the homepage's HTML, so crawlers see the wrong page.
 
 ### The Design System
 
@@ -260,17 +263,28 @@ The outbound link is driven by two optional fields on the layer object, `href` a
 
 **Vercel** auto-deploys from the `main` branch on GitHub. The repository is `n5tech/nvx-n5-website`.
 
-Vercel detects Vite projects automatically -- no build configuration needed. It runs `npm run build` (which runs `vite build`) and serves the `dist/` directory.
+Vercel detects Vite projects automatically -- no build configuration needed. It runs `npm run build` and serves the `dist/` directory. That one command runs three steps:
+
+1. `vite build` -- the normal client bundle into `dist/`.
+2. `vite build --ssr src/entry-server.jsx --outDir dist-server` -- the same React app, compiled to run in Node.
+3. `node scripts/prerender.js` -- renders every route to HTML and writes it into `dist/` (`index.html`, `legal/index.html`), with a per-route `<title>`, description, `canonical` and `og:url`.
+
+**Why prerender a one-page marketing site?** Because a plain Vite SPA ships an empty `<div id="root"></div>`, and the copy appears only after JavaScript runs. Google runs JavaScript; most AI answer-engine crawlers (GPTBot, ClaudeBot, PerplexityBot) do not. Before this, those crawlers saw a title, a meta description and nothing else, so `llms.txt` was the only place they could read the site. Think of a shop window with the lights off: the goods are inside, but the people walking past at night (the crawlers) see an empty pane. Prerendering turns the lights on. In the browser, `main.jsx` then *hydrates* that markup with `hydrateRoot` (React attaches to the existing HTML instead of redrawing it), and falls back to `createRoot` when the root is empty, which is what the dev server serves.
+
+**Hydration is a contract: the server markup and the first client render must match.** Anything that can differ between build time and view time breaks it. The one such value here is the footer's `new Date().getFullYear()`: a page built in December and viewed in January would disagree, so that `<span>` carries `suppressHydrationWarning`. Browser-only APIs (`window`, `document`) are fine as long as they stay inside `useEffect`, which never runs during prerendering. Put one in a component body and the build fails, because Node has no `window`.
 
 **SPA routing requires `vercel.json`.** Unlike Next.js or CRA, Vercel does *not* automatically fall back to `index.html` for client-side routes in Vite projects. Without a rewrite rule, direct navigation to `/legal` (or any route refresh) returns 404. The fix is a one-file `vercel.json` at the repo root:
 
 ```json
 {
   "rewrites": [
+    { "source": "/legal", "destination": "/legal/index.html" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
 ```
+
+The `/legal` rule points the extensionless URL at its prerendered file. Without it, whether `/legal` reaches `legal/index.html` or falls through to the homepage's HTML depends on how the host resolves directories. `vite preview` resolves it the second way, and the result is a hydration error (React #418) because the client renders the Legal page over homepage markup. That is how this was caught before it shipped.
 
 This rewrites all paths to `/` so `BrowserRouter` can resolve the route client-side.
 
