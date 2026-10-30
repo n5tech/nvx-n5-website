@@ -6,7 +6,7 @@ Building sophisticated software systems should not depend on engineering experti
 
 ## Homepage
 
-- [N5 homepage](https://n5corp.com/): The thesis (code is not enough; systems are what matter), the three-layer stack, how it works (intent → design → compile → execute), benefits, use cases, principles, and the relationship between Sutra and Rumi.
+- [N5 homepage](https://n5corp.com/): The thesis (code was the first step, systems are what matter; code is not the system, architecture makes it one), why it matters (sophisticated systems should not depend on engineering expertise or organizational resources), the three-layer stack, how it works (intent → design → compile → execute), benefits, use cases, principles, and the relationship between Sutra and Rumi.
 
 ## The Stack
 
