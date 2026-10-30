@@ -3,7 +3,7 @@ export default function Footer({ onContact }) {
     <footer id="contact" className="border-t border-border">
       {/* Closing statement */}
       <div className="py-32 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#e6eaf2] mb-8 tracking-tight leading-tight">
             N5 is the infrastructure for turning intent into running systems.
           </h2>
